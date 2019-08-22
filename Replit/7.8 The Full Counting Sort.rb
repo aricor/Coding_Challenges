@@ -2,10 +2,11 @@
 
 #https://repl.it/student/submissions/7532987?lite=true
 
+require 'benchmark'
 
-def full_counting_sort(array)
-
-    array.each_with_index{|e,i| 
+def full_counting_sort(test_arr) 
+    array = []
+    test_arr.each_with_index{|e,i| 
         array[i] = [
             e.split(' ')[0].to_i,
             e.split(' ')[1]
@@ -36,7 +37,41 @@ def full_counting_sort(array)
     }     
     res     
   end
+
+  #Juan Manuel's solution
+  def full_counting_sort_juan(array)
+    helper = []
+    array.each do |item|
+      helper[item.to_i].nil? ? helper[item.to_i] = [item.split(' ')[1]] :  
+                               helper[item.to_i] << item.split(' ')[1]
+    end
+    helper.flatten
+  end
+
+  test_arr = ["0 ab", "6 cd", "0 ef", "6 gh", "4 ij", "0 ab", "6 cd", "0 ef", "6 gh", "0 ij", "4 that", "3 be", "0 to", "1 be", "5 question", "1 or", "2 not", "4 is", "2 to", "4 the"]
+#   p full_counting_sort(test_arr)
+#   p full_counting_sort_juan(test_arr)
+
+n = 100000
+
+Benchmark.bm do |benchmark|
+
+    x = benchmark.report("Ivan") do
+      n.times do
+        full_counting_sort(test_arr)
+      end
+    end
   
-  p full_counting_sort(["0 ab", "6 cd", "0 ef", "6 gh", "4 ij", "0 ab", "6 cd", "0 ef", "6 gh", "0 ij", "4 that", "3 be", "0 to", "1 be", "5 question", "1 or", "2 not", "4 is", "2 to", "4 the"])
+    y = benchmark.report("Juan") do
+      n.times do
+        full_counting_sort_juan(test_arr)
+      end
+    end
+  
+    puts "#{(y.real/x.real)*100}%"
+    puts "#{(x.real/y.real)*100}%"
+  end
+
+
   # => ["ab", "ef", "ab", "ef", "ij", "to", "be", "or", "not", "to", "be", "ij", "that", "is", "the", "question", "cd", "gh", "cd", "gh"]
   #    ["ab", "ef", "ab", "ef", "ij", "to", "be", "or", "not", "to", "be", "ij", "that", "is", "the", "question", "cd", "gh", "cd", "gh"]
