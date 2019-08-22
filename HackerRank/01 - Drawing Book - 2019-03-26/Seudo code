@@ -1,0 +1,9 @@
+//n=longitude of the book
+//p=page to find
+
+//calculate the amount of pages from the front -> f = p / 2
+
+//calculate the amount of pages from the back -> b = (n-p) /2
+    //
+//find the minimin between f and p
+//show

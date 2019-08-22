@@ -1,0 +1,20 @@
+//Input:
+    //keyboards: Array of keyboards of unknown lenght.
+    //drives: Array of drives of unkown lenght.
+    //b: Money Monica has
+//calculate keyboard length: keyLenght
+//calculate drives lenghth: drivesLenght
+//create an array of length: possibilities = keyLenght * drivesLenght
+//find the element that is just bellow of size from the b amount:  
+    //sort the array: https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
+    //assuming the array is sorted being the index 0 the highest:
+        //travel the array comparing it with b:
+            purchase = -1
+            for(i=0; i < possibilities.lenght ;i++){
+                b > possibilities[i] ? 
+                    purchase = possibilities[i] :
+                    0;            
+            }
+            return purchase
+
+            

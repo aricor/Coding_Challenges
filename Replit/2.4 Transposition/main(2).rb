@@ -1,4 +1,5 @@
 def transpose(string)
+    flag = true
     while flag
         flag = false
         for i in 0..string.length
