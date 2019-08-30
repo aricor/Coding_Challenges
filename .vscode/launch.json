@@ -22,6 +22,18 @@
             "type": "Ruby",
             "request": "launch",
             "program": "${workspaceRoot}/Replit/7.10 Simple Quick Sort.rb"
+        },        
+        {
+            "name": "7.11 Quicksort Advanced.rb",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/Replit/7.11 Quicksort Advanced.rb"
+        },
+        {
+            "name": "8.2 Full Merge Sort",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/Replit/8.2 Full Merge Sort.rb"
         }
     ]
     

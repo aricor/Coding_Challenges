@@ -14,6 +14,7 @@ def simple_quicksort(array)
     end    
     array = simple_quicksort(left) + [pivot] + simple_quicksort(right)   
 
+    
 end
 
 p simple_quicksort([5, 8, 1, 3, 7, 10, 2])
