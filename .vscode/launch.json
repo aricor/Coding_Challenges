@@ -34,7 +34,14 @@
             "type": "Ruby",
             "request": "launch",
             "program": "${workspaceRoot}/Replit/8.2 Full Merge Sort.rb"
+        },
+        {
+            "name": "8.3 Index Match.rb",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/Replit/8.3 Index Match.rb"
         }
+        
     ]
     
 }
