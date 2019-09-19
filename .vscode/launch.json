@@ -40,8 +40,31 @@
             "type": "Ruby",
             "request": "launch",
             "program": "${workspaceRoot}/Replit/8.3 Index Match.rb"
-        }
-        
-    ]
-    
+        },
+        {
+            "name": "10.1 Weighted Graphs",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/Replit/10.1 Weighted Graphs.rb"
+            
+        },
+        {
+            "name": "10.2 Shortest Path on a weighted Graph",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/Replit/10.2 Shortest Path on a weighted Graph.rb"            
+        },
+        {
+            "name": "01 Anagram",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/HackerRank/01 - Anagram.rb"            
+        }    ,
+        {
+            "name": "02 Palindrome Index",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/HackerRank/02 Palindrome Index.rb"            
+        }  
+    ]    
 }
